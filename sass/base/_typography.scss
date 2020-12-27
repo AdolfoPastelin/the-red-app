@@ -1,12 +1,14 @@
 .primary-heading {
 	color: $color-white;
 	text-transform: uppercase;
+	backface-visibility: hidden;
 
 	&--front {
 		display: block;
 		font-size: 7rem;
 		font-weight: 400;
 		letter-spacing: 1rem;
+		animation: headerFrontAnimation 1.5s
 	}
 
 	&--small {
@@ -15,5 +17,6 @@
 		font-weight: 700;
 		letter-spacing: 0.5rem;
 		text-align: center;
+		animation: headerSmallAnimation 3.7s
 	}
 }
