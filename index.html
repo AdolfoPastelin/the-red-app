@@ -1,41 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<!-- icon -->
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+		<!-- Google fonts import -->
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Nunito:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Roboto:wght@100;300;400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- CSS styles | bootsrap and font awesome icons -->
+		<link rel="stylesheet" type="text/css" href="vendors/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="vendors/font-awesome-4.7.0/css/font-awesome.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.compiled.css" />
+		<title>The RedApp</title>
+	</head>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge"> 
-	<!-- icon -->
-	<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-	<!-- Google fonts import -->
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link
-	href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Nunito:wght@300;400;700&family=Open+Sans:wght@300;400;700&family=Roboto:wght@100;300;400;500;700&display=swap"
-	rel="stylesheet">
-	<!-- CSS styles | bootsrap and font awesome icons -->
-	<link rel="stylesheet" type="text/css" href="vendors/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="vendors/font-awesome-4.7.0/css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="css/style.compiled.css">
-	<title>The RedApp</title>
-</head>
+	<body>
+		<!-- BEM Notation (blocks, elements, modifiers) -->
+		<header class="header">
+			<div class="header__title-box">
+				<h1 class="primary-heading">
+					<span class="primary-heading--front">The RedApp</span>
+					<span class="primary-heading--small">It's all you need for success!</span>
+				</h1>
+			</div>
 
-<body>
-	<!-- BEM Notation (blocks, elements, modifiers)-->
-	<header class="header">
-		<div class="header__title-box">
-			<h1 class="primary-heading">
-				<span class="primary-heading--front">The RedApp</span>
-				<span class="primary-heading--small">It's all you need for success!</span>
-			</h1>
-		</div>
-	</header>
+			<div class="main-menu">
+				<div class="main-menu__logo-container">
+					<img src="img/redapp-logo.png" alt="logo" class="main-menu__menu-logo" />
+				</div>
 
+				<img src="img/redapp-logo.png" alt="logo" class="main-menu__logo--hidden" />
 
-	<script src="vendors/jquery/jquery-3.5.1.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-		integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-		crossorigin="anonymous"></script>
-	<script src="vendors/js/bootstrap.min.js"></script>
-</body>
+				<nav class="menu">
+					<ul>
+						<li>
+							<a href="index.html" class="active-menu">Home</a>
+						</li>
+						<li class="submenu">
+							<a href="#">What we offer</a>
+							<ul>
+								<li><a href="offer.html">Our offer</a></li>
+								<li><a href="packages.html">Our packages</a></li>
+								<li><a href="#">History</a></li>
+								<li><a href="#">Company Contact</a></li>
+							</ul>
+						</li>
 
+						<li class="submenu">
+							<a href="about.html">About us</a>
+							<ul>
+								<li><a href="about.html">About</a></li>
+								<li><a href="#">Our history</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="post.html">Post free</a>
+						</li>
+						<li>
+							<a href="login.html">Login</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<script src="vendors/jquery/jquery-3.5.1.min.js"></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+			crossorigin="anonymous"
+		></script>
+		<script src="vendors/js/bootstrap.min.js"></script>
+	</body>
 </html>
