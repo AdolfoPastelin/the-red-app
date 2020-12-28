@@ -1,21 +1,81 @@
 .main-menu {
-	height: 7rem;
+	height: 6rem;
 	position: absolute;
 	margin-bottom: 2rem;
 	width: 100%;
 	font-size: 1.6rem;
-	background-color: rgba($color-white, 0.6);
-	color: $color-white;
+	background-color: rgba($white-color, 0.6);
+	color: $black-color;
 
-	&__logo-container{
+	&__logo-container {
 		width: 17rem;
-		height: 9rem;
-		background-color: rgba($color-white, 0.6);
-		border-bottom-left-radius: 5rem;
-		border-bottom-right-radius: 5rem;
-
+		height: 6rem;
+		background-color: rgba($white-color, 0.6);
+		border-bottom-left-radius: $bubble-size;
+		border-bottom-right-radius: $bubble-size;
 		position: absolute;
-		top: 7rem;
+		top: 0;
 		left: 5rem;
+	}
+
+	&__menu-logo {
+		@include centerElements;
+		width: 15rem;
+		cursor: pointer;
+	}
+
+	/* hidden */
+	&__logo--hidden {
+		visibility: hidden;
+		display: none;
+	}
+
+	.menu {
+		float: right;
+		margin-right: 4rem;
+		margin-top: 0.1rem;
+
+		ul {
+			list-style: none;
+			display: flex;
+			text-transform: uppercase;
+
+			ul {
+				display: none;
+			}
+		}
+
+		a {
+			display: block;
+			padding: 1.5rem;
+			color: $logo-color;
+			text-decoration: none;
+			.submenu:not(:last-child) {
+				border-right: 0.2rem solid $white-smoke;
+			}
+
+			text-shadow: 0 0 0.1rem $black-color, 0 0 0.1rem #aaa;
+
+			&:hover,
+			&:active {
+				margin-left: .1rem;
+				color: $white-color;
+				text-shadow: 0 0 0.1rem $black-color;
+				background-color: rgba($logo-color, 1);
+				border-bottom: 0.2rem solid $logo-color;
+			}
+		}
+
+		.active-menu {
+			color: $white-color;
+			background-color: $logo-color;
+		}
+
+		.submenu:hover ul {
+			display: block;
+			margin-top: 0;
+			width: 100%;
+			background-color: rgba($white-color, 0.6);
+		}
 	}
 }
