@@ -2349,9 +2349,59 @@ body {
   font-weight: 400;
   line-height: 1.7;
   color: #000;
-  font-size: 4rem;
+  font-size: 3rem;
   box-sizing: border-box; }
 
+@keyframes headerFrontAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-15rem); }
+  50% {
+    opacity: 0.5;
+    transform: translateY(5rem); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes headerSmallAnimation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.primary-heading {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden; }
+  .primary-heading--front {
+    display: block;
+    font-size: 7rem;
+    font-weight: 400;
+    letter-spacing: 1rem;
+    animation: headerFrontAnimation 1.5s; }
+  .primary-heading--small {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    animation: headerSmallAnimation 3.7s; }
+
 /* @import "component/base"; */
+.header {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(to left bottom, rgba(255, 102, 102, 0.45), rgba(226, 72, 72, 0.45)), url("../../img/header1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  clip-path: polygon(0 0, 100% 0, 100% 89%, 0 100%);
+  position: relative; }
+  .header__title-box {
+    position: absolute;
+    top: 15%;
+    left: 61%;
+    /* transform: translate(); */ }
+
 /* @import "themes"; */
 /* @import "vendors"; */
