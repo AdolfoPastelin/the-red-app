@@ -1,5 +1,5 @@
 .primary-heading {
-	color: $color-white;
+	color: $white-color;
 	text-transform: uppercase;
 	backface-visibility: hidden;
 
@@ -8,7 +8,8 @@
 		font-size: 7rem;
 		font-weight: 400;
 		letter-spacing: 1rem;
-		animation: headerFrontAnimation 1.5s
+		animation: headerFrontAnimation 1.5s;
+		text-shadow: 0px 0px 2px #000, 0px 0px 1px #888;
 	}
 
 	&--small {
@@ -17,6 +18,7 @@
 		font-weight: 700;
 		letter-spacing: 0.5rem;
 		text-align: center;
-		animation: headerSmallAnimation 3.7s
+		animation: headerSmallAnimation 3.7s;
+		text-shadow: 0px 0px 2px #000, 0px 0px 1px #888;
 	}
 }
