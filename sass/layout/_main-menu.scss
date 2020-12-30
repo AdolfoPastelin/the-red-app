@@ -58,7 +58,7 @@
 
 			&:hover,
 			&:active {
-				margin-left: .1rem;
+				margin-left: 0.1rem;
 				color: $white-color;
 				text-shadow: 0 0 0.1rem $black-color;
 				background-color: rgba($logo-color, 1);
@@ -77,5 +77,16 @@
 			width: 100%;
 			background-color: rgba($white-color, 0.6);
 		}
+	}
+
+	.hidden {
+		display: none;
+		//visibility: hidden;
+		//opacity: 0;
+	}
+
+	.bars,
+	.times {
+		display: none;
 	}
 }
