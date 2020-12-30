@@ -118,7 +118,7 @@ body {
         color: #fff;
         text-shadow: 0 0 0.1rem #000;
         background-color: #751713;
-        border-bottom: 0.2rem solid #751713; }
+        border: 0.2rem solid #000; }
     .main-menu .menu .active-menu {
       color: #fff;
       background-color: #751713; }
