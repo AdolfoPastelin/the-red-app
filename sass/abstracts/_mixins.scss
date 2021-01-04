@@ -6,6 +6,18 @@
 }
 
 @mixin mediaQuery($screenSize) {
+	@if $screenSize == verySmallPhone300 {
+		@media (max-width:18.75em) { //300px / 16
+			@content
+		};
+	}
+
+	@if $screenSize == SmallPhone400 {
+		@media (max-width:25em) { //400px / 16
+			@content
+		};
+	}
+
 	@if $screenSize == smallPhone500 {
 		@media (max-width:31.25em) { //500px / 16
 			@content

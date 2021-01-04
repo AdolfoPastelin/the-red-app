@@ -9,20 +9,62 @@ html {
 	//si se pone tamaño 62.5% sería como decir que 1rem = 10px
 	font-size: 62.5%;
 
+	//12/16 para aumentar la leta en el tamaño max de pantalla
+	@include mediaQuery(desktop) {
+		font-size: 75%;
+	}
+
+	//9.5/16 para que la letra reduzca un poco a comparación del tamaño al original
+	@include mediaQuery(tabletLand1300) {
+		font-size: 59.37%;
+	}
+
 	//9/16 para que la letra reduzca un poco a comparación del tamaño al original
 	@include mediaQuery(tabletLand1200) {
 		font-size: 56.25%;
 	}
 
-	//8/16 para reducir la letra un poco más cuando sea más chica la pantalla
-	@include mediaQuery(tabletPort900) {
+	//8.5/16
+	@include mediaQuery(tabletLand1100) {
+		font-size: 53.12%;
+	}
+
+	//8/16
+	@include mediaQuery(tabletLand1000) {
 		font-size: 50%;
 	}
 
-	//12/16 para aumentar la leta en el tamaño max de pantalla
-	//no se usa 11/16 por si se quiere incluir el tamaño debajo del maximo creado en mixins
-	@include mediaQuery(desktop) {
-		font-size: 75%; 
+	//7.5/16 para reducir la letra un poco más cuando sea más chica la pantalla
+	@include mediaQuery(tabletPort900) {
+		font-size: 46.87%;
+	}
+
+	//7/16 para reducir la letra un poco más cuando sea más chica la pantalla
+	@include mediaQuery(tabletPort800) {
+		font-size: 43.75%;
+	}
+
+	//6.5/16
+	@include mediaQuery(tabletPort700) {
+		font-size: 40.62%;
+	}
+
+	//6/16
+	@include mediaQuery(phone600) {
+		font-size: 37.5%;
+	}
+
+	//5.5/16
+	@include mediaQuery(smallPhone500) {
+		font-size: 34.37%;
+		/* .header__title-box h1 {
+				margin-left: 4.5rem;
+		} */
+	}
+
+	//4/16
+	@include mediaQuery(SmallPhone400) {
+		font-size: 25%;
 	}
 }
 
