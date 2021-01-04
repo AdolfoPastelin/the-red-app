@@ -2343,9 +2343,18 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
-  font-family: "lato", sans-serif;
+  font-family: 'lato', sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #000;
@@ -2378,7 +2387,7 @@ body {
     font-weight: 400;
     letter-spacing: 1rem;
     animation: headerFrontAnimation 1.5s;
-    text-shadow: 0px 0px 2px #000, 0px 0px 1px #888; }
+    text-shadow: 1.2px 1.2px 1px #000, 0px 1px 1px #444; }
   .primary-heading--small {
     display: block;
     font-size: 2rem;
@@ -2386,7 +2395,7 @@ body {
     letter-spacing: 0.5rem;
     text-align: center;
     animation: headerSmallAnimation 3.7s;
-    text-shadow: 0px 0px 2px #000, 0px 0px 1px #888; }
+    text-shadow: 1.2px 1.2px 1px #000, 0px 1px 1px #444; }
 
 /* @import "component/base"; */
 .header {
@@ -2413,7 +2422,8 @@ body {
   font-size: 1.6rem;
   background-color: rgba(255, 255, 255, 0.6);
   color: #000;
-  /* hidden */ }
+  /* hidden */
+  /* min 7:26 (pendiente) */ }
   .main-menu__logo-container {
     width: 17rem;
     height: 6rem;
@@ -2431,7 +2441,6 @@ body {
     width: 15rem;
     cursor: pointer; }
   .main-menu__logo--hidden {
-    visibility: hidden;
     display: none; }
   .main-menu .menu {
     float: right;
@@ -2452,11 +2461,11 @@ body {
       .main-menu .menu a .submenu:not(:last-child) {
         border-right: 0.2rem solid #f0eeed; }
       .main-menu .menu a:hover, .main-menu .menu a:active {
-        margin-left: .1rem;
+        margin-left: 0.1rem;
         color: #fff;
         text-shadow: 0 0 0.1rem #000;
         background-color: #751713;
-        border-bottom: 0.2rem solid #751713; }
+        border: 0.2rem solid #000; }
     .main-menu .menu .active-menu {
       color: #fff;
       background-color: #751713; }
@@ -2465,6 +2474,16 @@ body {
       margin-top: 0;
       width: 100%;
       background-color: rgba(255, 255, 255, 0.6); }
+  .main-menu .hidden {
+    display: none; }
+  .main-menu .bars,
+  .main-menu .times {
+    display: none; }
+  @media (max-width: 43.75em) {
+    .main-menu__logo-container {
+      display: none; }
+    .main-menu__logo-hidden {
+      display: block; } }
 
 /* @import "themes"; */
 /* @import "vendors"; */
