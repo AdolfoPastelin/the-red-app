@@ -13,7 +13,7 @@
 	}
 
 	@if $screenSize == phone600 {
-		@media (max-width:37.5em) { //500px / 16
+		@media (max-width:37.5em) { //600px / 16
 			@content
 		};
 	}
@@ -54,8 +54,14 @@
 		};
 	}
 
-	@if $screenSize == tabletLand1300 {
+	@if $screenSize == tabletLand1300 { 
 		@media (max-width:81.25em) {
+			@content
+		};
+	}
+
+	@if $screenSize == desktop {
+		@media (min-width:112.5em) {
 			@content
 		};
 	}

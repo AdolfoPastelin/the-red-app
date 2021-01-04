@@ -5,15 +5,32 @@
 }
 
 html {
+	//10/16 = 0.625 //(10/16 valor PREDETERMINADO = 0.)
+	//si se pone tamaño 62.5% sería como decir que 1rem = 10px
 	font-size: 62.5%;
+
+	//9/16 para que la letra reduzca un poco a comparación del tamaño al original
+	@include mediaQuery(tabletLand1200) {
+		font-size: 56.25%;
+	}
+
+	//8/16 para reducir la letra un poco más cuando sea más chica la pantalla
+	@include mediaQuery(tabletPort900) {
+		font-size: 50%;
+	}
+
+	//12/16 para aumentar la leta en el tamaño max de pantalla
+	//no se usa 11/16 por si se quiere incluir el tamaño debajo del maximo creado en mixins
+	@include mediaQuery(desktop) {
+		font-size: 75%; 
+	}
 }
 
 body {
-	font-family: "lato", sans-serif;
+	font-family: 'lato', sans-serif;
 	font-weight: 400;
 	line-height: 1.7;
 	color: $black-color;
 	font-size: $default-font-size;
 	box-sizing: border-box;
 }
-
